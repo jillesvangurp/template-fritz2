@@ -1,4 +1,4 @@
-rootProject.name = "my-new-kmp-project"
+rootProject.name = "my-fritz2-application"
 
 pluginManagement {
     repositories {
