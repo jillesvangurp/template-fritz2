@@ -33,6 +33,9 @@ kotlin {
                 implementation("dev.fritz2:headless:_")
                 implementation("org.jetbrains:markdown:_")
                 implementation(KotlinX.serialization.json)
+                implementation(KotlinX.datetime)
+                implementation("com.jillesvangurp:kotlinx-serialization-extensions:_")
+                implementation(KotlinX.serialization.json)
                 implementation(Koin.core)
 
             }

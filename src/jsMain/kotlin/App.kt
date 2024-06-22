@@ -1,9 +1,18 @@
-import dev.fritz2.core.render
+import com.tryformation.localization.Translatable
+import localization.translate
 
-fun main() {
-    render("#target") {
+suspend fun main() {
+    startAppWithKoin {
         h1 {
-            +"OHAI"
+            translate(DefaultLangStrings.Hello)
         }
     }
+}
+
+enum class DefaultLangStrings : Translatable {
+    Hello,
+    ;
+
+    override val prefix: String
+        get() = "default"
 }
