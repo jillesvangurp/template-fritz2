@@ -20,7 +20,8 @@ kotlin {
         browser {
             webpackTask {
                 // this disables anything to do with webpack so we can use vite
-                enabled = false
+                enabled = true
+                mainOutputFileName = "app.js"
             }
             testTask {
                 useMocha()

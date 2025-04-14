@@ -4,8 +4,11 @@ import localization.translate
 suspend fun main() {
     // starts up koin and initializes the TranslationStore
     startAppWithKoin {
-        h1 {
+        h1("text-red-700 p-5") {
             translate(DefaultLangStrings.Hello)
+        }
+        p {
+            +"HAIAIA"
         }
     }
 }

@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind utilities;
-@tailwind components;
+@import "tailwindcss";
 
 @layer base {
   h1 {
@@ -16,6 +14,6 @@
     @apply mb-2;
   }
   a {
-    @apply text-blueBright-600 hover:text-blueBright-400 underline cursor-pointer;
+    @apply text-blue-600 hover:text-blue-400 underline cursor-pointer;
   }
 }
