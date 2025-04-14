@@ -19,11 +19,15 @@ kotlin {
     js(IR) {
         browser {
             webpackTask {
-                // this disables anything to do with webpack so we can use vite
+                // settingt this to false disables anything to do with webpack so we can use vite
                 enabled = true
+                // sadly we need webpack to bundle things up for vite for now
                 mainOutputFileName = "app.js"
+                // vite processes and adds tailwind styling; so there's no need for
+                // any webpack hackery for that.
             }
             testTask {
+                // karma is a PITA, do proper unit tests without a browser
                 useMocha()
             }
         }
@@ -58,19 +62,9 @@ kotlin {
         jsMain  {
             dependencies {
                 implementation(kotlin("stdlib-js"))
-                implementation(npm("tailwindcss", "_"))
-                implementation(npm("@tailwindcss/forms", "_"))
 
                 // fluent-js
                 implementation("com.tryformation:fluent-kotlin:_")
-
-                // webpack
-                implementation(devNpm("postcss", "_"))
-                implementation(devNpm("postcss-loader", "_"))
-                implementation(devNpm("autoprefixer", "_"))
-                implementation(devNpm("css-loader", "_"))
-                implementation(devNpm("style-loader", "_"))
-                implementation(devNpm("cssnano", "_"))
             }
         }
 

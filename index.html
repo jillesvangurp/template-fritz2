@@ -10,11 +10,17 @@
     <meta property="og:image" content="TODO" />
     <meta property="og:url" content="TODO" />
     <meta property="og:type" content="website" />
+    <!-- needs to point at src because that's where vite expects source code
+    the vite tailwind plugin picks it up from there and then does the right thing to
+    produce the proper css
+    -->
     <link href="/src/styles.css" rel="stylesheet" />
 </head>
 <body>
 <div id="target"></div>
 
+<!-- needs to point at the app.js file produced by webpack
+-->
 <script src="build/kotlin-webpack/js/developmentExecutable/app.js"></script>
 </body>
 </html>

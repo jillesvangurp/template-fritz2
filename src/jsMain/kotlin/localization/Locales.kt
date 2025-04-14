@@ -10,6 +10,7 @@ enum class Locales(
     override val aliases: Array<String>,
 ) : Locale {
     EN_US("en", "US", arrayOf("en-GB", "en")),
+    DE_DE("de", "DE", arrayOf("de-DE", "de")),
     ;
 
     val title = "${languageCode}-${countryCode}"
