@@ -24,7 +24,7 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     rollupOptions: {
-      input: kotlinEntry,
+      input: ['index.html',kotlinEntry],
     }
   }
 })
