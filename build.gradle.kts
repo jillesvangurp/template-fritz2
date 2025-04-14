@@ -18,6 +18,10 @@ repositories {
 kotlin {
     js(IR) {
         browser {
+            webpackTask {
+                // this disables anything to do with webpack so we can use vite
+                enabled = false
+            }
             testTask {
                 useMocha()
             }

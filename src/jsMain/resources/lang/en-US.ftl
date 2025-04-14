@@ -1,1 +1,1 @@
-default-hello=OHAI
+default-hello=OHAI There.
